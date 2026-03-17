@@ -122,7 +122,6 @@ function App() {
             <div className="hero__content">
               <span className="eyebrow">{siteContent.eyebrow}</span>
               <h1>{siteContent.heroTitle}</h1>
-              <p className="hero__lead">{siteContent.heroBody}</p>
               <div className="hero__actions">
                 <a className="button button--primary" href={siteContent.heroPrimaryCta.href}>
                   {siteContent.heroPrimaryCta.label}
@@ -130,11 +129,6 @@ function App() {
                 <a className="button button--secondary" href={siteContent.heroSecondaryCta.href}>
                   {siteContent.heroSecondaryCta.label}
                 </a>
-              </div>
-              <div className="hero__meta" aria-label="Punti di forza">
-                <span>Partner unico</span>
-                <span>Approccio chiavi in mano</span>
-                <span>Supporto tecnico e operativo</span>
               </div>
             </div>
 
@@ -232,13 +226,6 @@ function App() {
                 </a>
               </div>
 
-              <div className="map-card">
-                <iframe
-                  title="Mappa Melin Group"
-                  loading="lazy"
-                  src="https://www.google.com/maps?q=45.435452,11.959087&z=17&output=embed"
-                />
-              </div>
             </div>
 
             <div className="form-panel">
@@ -309,6 +296,13 @@ function App() {
                 </p>
               </form>
             </div>
+          </div>
+          <div className="map-card map-card--full">
+            <iframe
+              title="Mappa Melin Group"
+              loading="lazy"
+              src="https://www.google.com/maps?q=45.435452,11.959087&z=17&output=embed"
+            />
           </div>
         </section>
       </main>
