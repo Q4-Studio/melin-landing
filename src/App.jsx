@@ -160,34 +160,31 @@ function App() {
         </section>
 
         <section className="section section--about" id="chi-siamo">
-          <div className="container about-grid">
-            <div className="about-panel">
-              <span className="eyebrow">Approccio Melin</span>
-              <h2>{siteContent.aboutTitle}</h2>
-              <p>{siteContent.aboutBody}</p>
-              <ul className="about-list">
-                {siteContent.aboutHighlights.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
+          <div className="container about-content">
+            <span className="eyebrow">Approccio Melin</span>
+            <h2>{siteContent.aboutTitle}</h2>
+            <p className="about-content__body">{siteContent.aboutBody}</p>
+
+            <ul className="about-list">
+              {siteContent.aboutHighlights.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+
+            <div className="about-stats">
+              <div className="about-stats__item">
+                <strong>6</strong>
+                <span>ambiti di servizio integrati</span>
+              </div>
+              <div className="about-stats__item">
+                <strong>1</strong>
+                <span>referente per progetto e attivita</span>
+              </div>
             </div>
 
-            <aside className="about-highlight">
-              <p className="about-highlight__label">Un unico interlocutore</p>
-              <p className="about-highlight__copy">
-                Dalla fase iniziale alla gestione operativa, costruiamo un flusso di lavoro ordinato, leggibile e allineato con il cliente.
-              </p>
-              <div className="about-highlight__stats">
-                <div>
-                  <strong>6</strong>
-                  <span>ambiti di servizio integrati</span>
-                </div>
-                <div>
-                  <strong>1</strong>
-                  <span>referente per progetto e attivita</span>
-                </div>
-              </div>
-            </aside>
+            <p className="about-content__note">
+              Dalla fase iniziale alla gestione operativa, costruiamo un flusso di lavoro ordinato, leggibile e allineato con il cliente.
+            </p>
           </div>
         </section>
 
