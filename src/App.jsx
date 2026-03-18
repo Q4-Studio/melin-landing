@@ -219,9 +219,11 @@ function App() {
 
               <div className="contact-links">
                 <a className="button button--secondary" href={siteContent.contact.mapsUrl} target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{width:'1.1rem',height:'1.1rem',flexShrink:0,marginRight:'0.5rem'}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                   Apri su Google Maps
                 </a>
                 <a className="button button--ghost" href={siteContent.contact.facebookUrl} target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 24 24" fill="currentColor" style={{width:'1.1rem',height:'1.1rem',flexShrink:0,marginRight:'0.5rem'}}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                   Facebook
                 </a>
               </div>
@@ -309,9 +311,17 @@ function App() {
 
       <footer className="site-footer">
         <div className="container site-footer__inner">
-          <p>
-            © {new Date().getFullYear()} {siteContent.companyName}
-          </p>
+          <div>
+            <p>
+              © {new Date().getFullYear()} {siteContent.companyName}
+            </p>
+            <p className="site-footer__credit">
+              Realizzato da{' '}
+              <a href="https://q4.studio" target="_blank" rel="noreferrer">
+                Q4 Studio
+              </a>
+            </p>
+          </div>
           <div className="site-footer__links">
             <a href={privacyHref}>Privacy Policy</a>
             <a href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</a>
