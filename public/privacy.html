@@ -3,18 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Privacy Policy | Melin Group</title>
+    <meta name="theme-color" content="#14100C" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Privacy policy | Melin Group</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Archivo:wght@400;500&display=swap");
 
       :root {
         color-scheme: dark;
-        --bg: #081f2f;
-        --surface: rgba(255, 255, 255, 0.06);
-        --border: rgba(120, 224, 255, 0.18);
-        --text: #eef8ff;
-        --muted: #abc7d9;
-        --accent: #32d0f6;
+        --inchiostro: #14100c;
+        --noce: #241c14;
+        --carta: #ebe6d9;
+        --bordeaux: #6e2330;
+        --ottone: #a8874a;
+        --testo: #ece6d8;
+        --tenue: #b3a693;
+        --filetto: rgba(168, 135, 74, 0.34);
+        --display: "EB Garamond", Georgia, serif;
+        --corpo: "Archivo", Arial, sans-serif;
       }
 
       * {
@@ -23,102 +31,215 @@
 
       body {
         margin: 0;
-        font-family: "Manrope", sans-serif;
-        background:
-          radial-gradient(circle at top left, rgba(50, 208, 246, 0.16), transparent 35%),
-          linear-gradient(180deg, #0a2840, var(--bg));
-        color: var(--text);
+        font-family: var(--corpo);
+        line-height: 1.65;
+        color: var(--testo);
+        background: var(--inchiostro);
+      }
+
+      .testata {
+        border-bottom: 1px solid var(--filetto);
+      }
+
+      .testata__inner,
+      main,
+      .piede__inner {
+        width: min(880px, calc(100% - 2.5rem));
+        margin: 0 auto;
+      }
+
+      .testata__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        min-height: 4.75rem;
+      }
+
+      .testata img {
+        display: block;
+        height: 2.1rem;
+        width: auto;
+        filter: brightness(0) invert(1) sepia(0.22) brightness(0.97);
+      }
+
+      .testata a.ritorno {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--tenue);
+      }
+
+      .testata a.ritorno:hover {
+        color: var(--ottone);
       }
 
       main {
-        width: min(920px, calc(100% - 2rem));
-        margin: 0 auto;
-        padding: 4rem 0 5rem;
+        padding: clamp(3rem, 7vw, 5rem) 0 clamp(3.5rem, 8vw, 6rem);
       }
 
-      h1,
-      h2 {
-        font-family: "Space Grotesk", sans-serif;
+      .etichetta {
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ottone);
+      }
+
+      hr.filetto {
+        border: 0;
+        height: 0;
+        border-top: 2px solid var(--ottone);
+        border-bottom: 1px solid var(--filetto);
+        padding-top: 3px;
+        margin: 1.1rem 0 1.6rem;
       }
 
       h1 {
-        font-size: clamp(2.3rem, 6vw, 4rem);
-        margin: 0 0 1rem;
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: clamp(2.1rem, 5.5vw, 3.2rem);
+        line-height: 1.06;
+        margin: 0.9rem 0 0;
       }
 
       h2 {
-        margin-top: 2.5rem;
-        font-size: 1.2rem;
+        font-family: var(--display);
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin: 2.6rem 0 0.6rem;
+        padding-top: 1.1rem;
+        border-top: 1px solid var(--filetto);
       }
 
-      p,
-      li {
-        color: var(--muted);
-        line-height: 1.7;
+      p {
+        margin: 0 0 1rem;
+        color: var(--tenue);
       }
 
-      .panel {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 28px;
-        padding: 2rem;
-        backdrop-filter: blur(18px);
+      .sommario {
+        font-family: var(--display);
+        font-size: 1.15rem;
+        font-style: italic;
+        color: #cbbfae;
+        max-width: 58ch;
       }
 
       a {
-        color: var(--accent);
+        color: var(--carta);
+        text-decoration: none;
+        border-bottom: 1px solid var(--filetto);
+      }
+
+      a:hover {
+        color: var(--ottone);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--ottone);
+        outline-offset: 3px;
+      }
+
+      .avvertenza {
+        margin-top: 2.75rem;
+        padding-left: 1.1rem;
+        border-left: 2px solid var(--bordeaux);
+        font-size: 0.9rem;
+        line-height: 1.75;
+      }
+
+      .avvertenza p {
+        margin: 0;
+      }
+
+      .piede {
+        border-top: 1px solid var(--filetto);
+        padding: 2rem 0;
+      }
+
+      .piede__inner p {
+        font-size: 0.85rem;
+        margin: 0;
       }
     </style>
   </head>
   <body>
+    <header class="testata">
+      <div class="testata__inner">
+        <a href="./" aria-label="Melin Group, torna alla home" style="border: 0">
+          <img src="./assets/melin-white.png" alt="Melin Group" />
+        </a>
+        <a class="ritorno" href="./" style="border: 0">Torna al sito</a>
+      </div>
+    </header>
+
     <main>
-      <div class="panel">
-        <h1>Privacy Policy</h1>
-        <p>
-          Questa informativa descrive il trattamento dei dati inviati tramite il modulo contatti della landing page di Melin Group.
-        </p>
+      <span class="etichetta">Documento informativo</span>
+      <h1>Privacy policy</h1>
+      <hr class="filetto" />
+      <p class="sommario">
+        Questa informativa descrive il trattamento dei dati inviati tramite il modulo di richiesta
+        del sito di Melin Group.
+      </p>
 
-        <h2>Titolare del trattamento</h2>
-        <p>
-          Melin Group S.r.l.<br />
-          Viale del Lavoro 2/F, 35010 Vigonza (PD)<br />
-          Email: <a href="mailto:info@melingroup.it">info@melingroup.it</a><br />
-          Telefono: <a href="tel:+390498935842">049 8935842</a><br />
-          C.F. e P.I.: 04203220274
-        </p>
+      <h2>Titolare del trattamento</h2>
+      <p>
+        Melin Group S.r.l.<br />
+        Viale del Lavoro 2/F, 35010 Vigonza (PD)<br />
+        Email: <a href="mailto:info@melingroup.it">info@melingroup.it</a><br />
+        Telefono: <a href="tel:+390498935842">049 8935842</a><br />
+        C.F. e P.I.: 04203220274
+      </p>
 
-        <h2>Dati trattati</h2>
-        <p>
-          I dati raccolti possono includere nome, indirizzo email, numero di telefono facoltativo e contenuto del messaggio inviato tramite il modulo.
-        </p>
+      <h2>Dati trattati</h2>
+      <p>
+        I dati raccolti possono includere nome, indirizzo email, numero di telefono facoltativo e
+        contenuto del messaggio inviato tramite il modulo.
+      </p>
 
-        <h2>Finalità del trattamento</h2>
-        <p>
-          I dati sono trattati esclusivamente per gestire richieste di contatto, informazioni commerciali o richieste di preventivo inviate volontariamente dall’utente.
-        </p>
+      <h2>Finalità del trattamento</h2>
+      <p>
+        I dati sono trattati esclusivamente per gestire richieste di contatto, informazioni
+        commerciali o richieste di preventivo inviate volontariamente dall’utente.
+      </p>
 
-        <h2>Base giuridica</h2>
-        <p>
-          Il trattamento si basa sul consenso espresso dall’utente tramite l’apposita checkbox presente nel modulo contatti.
-        </p>
+      <h2>Base giuridica</h2>
+      <p>
+        Il trattamento si basa sul consenso espresso dall’utente tramite l’apposita casella presente
+        nel modulo di richiesta.
+      </p>
 
-        <h2>Modalità e conservazione</h2>
-        <p>
-          I dati vengono trasmessi a un webhook configurato da Melin Group e trattati con strumenti digitali adeguati alla gestione della richiesta. I dati vengono conservati per il tempo necessario a evadere la richiesta e per gli eventuali adempimenti collegati.
-        </p>
+      <h2>Modalità e conservazione</h2>
+      <p>
+        I dati vengono trasmessi a un webhook configurato da Melin Group e trattati con strumenti
+        digitali adeguati alla gestione della richiesta. I dati vengono conservati per il tempo
+        necessario a evadere la richiesta e per gli eventuali adempimenti collegati.
+      </p>
 
-        <h2>Diritti dell’interessato</h2>
-        <p>
-          L’utente può richiedere accesso, rettifica, cancellazione, limitazione o opposizione al trattamento scrivendo a
-          <a href="mailto:info@melingroup.it">info@melingroup.it</a>.
-        </p>
+      <h2>Diritti dell’interessato</h2>
+      <p>
+        L’utente può richiedere accesso, rettifica, cancellazione, limitazione o opposizione al
+        trattamento scrivendo a <a href="mailto:info@melingroup.it">info@melingroup.it</a>.
+      </p>
 
-        <h2>Aggiornamenti</h2>
+      <h2>Aggiornamenti</h2>
+      <p>
+        Questa pagina rappresenta una base operativa per il nuovo sito e dovrà essere verificata e
+        integrata con l’informativa definitiva prima della pubblicazione finale.
+      </p>
+
+      <div class="avvertenza">
         <p>
-          Questa pagina rappresenta una base operativa per il nuovo sito e dovrà essere verificata e integrata con l’informativa definitiva prima della pubblicazione finale.
+          Bozza da validare. Prima della messa in produzione il testo va confermato dal titolare del
+          trattamento.
         </p>
       </div>
     </main>
+
+    <footer class="piede">
+      <div class="piede__inner">
+        <p>© Melin Group S.r.l., Viale del Lavoro 2/F, 35010 Vigonza (PD)</p>
+      </div>
+    </footer>
   </body>
 </html>
-

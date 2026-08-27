@@ -1,32 +1,68 @@
 export const siteContent = {
   companyName: 'Melin Group S.r.l.',
-  eyebrow: 'Edilizia, sicurezza, manutenzioni e ambiente',
-  heroTitle: 'Soluzioni integrate che tengono insieme progetto, conformita e operativita.',
+
+  // Apertura
+  heroImprint: 'Melin Group S.r.l., Vigonza (PD)',
+  heroClassification: 'Edilizia · Sicurezza · Conformità · Conservazione',
+  heroTitle: 'Prendiamo in carico edifici che devono durare.',
   heroBody:
-    'Affianchiamo imprese e committenti con un approccio contract chiavi in mano: coordinamento, sicurezza, manutenzione e supporto tecnico in un unico partner operativo.',
+    'Affianchiamo committenti pubblici e privati nella gestione tecnica del patrimonio edilizio: una sola regia per progetto, conformità, cantiere e manutenzione nel tempo.',
   heroPrimaryCta: {
-    label: 'Richiedi una consulenza',
+    label: 'Richiedi un sopralluogo',
     href: '#contatti',
   },
   heroSecondaryCta: {
-    label: 'Scopri i servizi',
+    label: 'Vedi le aree di intervento',
     href: '#servizi',
   },
-  servicesHeading: 'I nostri servizi',
+  heroImage: {
+    src: 'assets/9facb1eb5cb805e8f7a9d9ea226dcf46.jpg',
+    alt: 'Due tecnici Melin Group in sopralluogo su un edificio in corso d’opera',
+  },
+
+  // Aree di intervento
+  servicesEyebrow: 'Aree di intervento',
+  servicesHeading: 'Sei aree di intervento, coordinate tra loro.',
   servicesIntro:
-    'Una struttura snella e multidisciplinare per seguire pratiche, cantieri, presidi antincendio, manutenzioni e riqualificazioni con un unico referente.',
-  aboutTitle: 'Chi siamo',
+    'Ogni area ha il suo referente tecnico e la sua documentazione. Pratiche, verifiche, lavorazioni e manutenzioni restano tracciabili dal primo sopralluogo alla consegna.',
+  servicesItemsLabel: 'Comprende',
+
+  // Chi siamo
+  aboutEyebrow: 'Chi siamo',
+  aboutTitle: 'Un solo interlocutore, per tutta la durata dell’opera.',
   aboutBody:
-    "Melin Group S.r.l. lavora a stretto contatto con il Cliente, proponendo soluzioni contract 'chiavi in mano' e un'offerta personalizzata, supportata dal nostro know-how e dall'esperienza maturata nel campo dell'edilizia.",
+    'Melin Group S.r.l. lavora a stretto contatto con il committente e propone soluzioni contract chiavi in mano. Mettiamo in una sola squadra competenze che di norma stanno in quattro fornitori diversi: tecnica edilizia, impianti, sicurezza e pratiche amministrative.',
+  aboutBodySecondary:
+    'Il risultato è un cantiere leggibile: un capitolato, un cronoprogramma, un registro degli interventi e una sola firma di responsabilità. Lo stesso metodo che serve quando si lavora su un edificio tutelato, dove nulla può essere improvvisato.',
+  aboutHighlightsLabel: 'Competenze in casa',
   aboutHighlights: [
     'Impianti elettrici e termici',
     'Prevenzione incendi e sicurezza sul lavoro',
     'Riqualificazione energetica degli edifici',
-    'Requisiti acustici passivi e valutazione impatto acustico',
+    'Requisiti acustici passivi e valutazione di impatto acustico',
+    'Interventi su edifici tutelati e beni vincolati',
   ],
-  contactTitle: 'Contatti',
+  gallery: [
+    {
+      src: 'assets/143aab412b1afd0a4e1589fee5f13777.jpg',
+      alt: 'Squadra tecnica che consulta la documentazione di cantiere',
+    },
+    {
+      src: 'assets/923d80660c54cbb0e81a1e45f08d246a.jpg',
+      alt: 'Tecnico durante la verifica periodica di estintori',
+    },
+    {
+      src: 'assets/dbc2535b1a731c1ebae2e196b74bd9ff.jpg',
+      alt: 'Gestione delle pratiche su una postazione di lavoro',
+    },
+  ],
+
+  // Contatti
+  contactEyebrow: 'Contatti',
+  contactTitle: 'Descrivete l’immobile e l’intervento.',
   contactIntro:
-    'Scrivici per una richiesta di informazioni o per valutare insieme il supporto operativo piu adatto al tuo progetto.',
+    'Rispondiamo con un sopralluogo o con una prima valutazione tecnica. Per le richieste urgenti conviene il telefono.',
+  formTitle: 'Richiedi un sopralluogo',
   contact: {
     address: 'Viale del Lavoro 2/F, 35010 Vigonza (PD)',
     email: 'info@melingroup.it',
@@ -38,43 +74,43 @@ export const siteContent = {
     facebookUrl: 'https://www.facebook.com/share/17nSRdtpkW/?mibextid=wwXIfr',
   },
   privacyPath: 'privacy.html',
+
   services: [
     {
       title: 'Amministrazione',
-      description: 'Coordinamento documentale, pratiche e supporto gestionale per tenere allineati tempi, adempimenti e operativita.',
-      image: 'assets/dbc2535b1a731c1ebae2e196b74bd9ff.jpg',
-      icon: 'document',
+      description:
+        'Teniamo l’ordine delle carte: pratiche, autorizzazioni, scadenze e rapporti con gli enti, allineati all’avanzamento dei lavori.',
+      items: ['Pratiche edilizie', 'Gestione documentale', 'Rapporti con gli enti'],
     },
     {
       title: 'Sicurezza',
-      description: 'Affianchiamo il cliente con verifiche, coordinamento e cultura della prevenzione nei contesti produttivi e di cantiere.',
-      image: 'assets/143aab412b1afd0a4e1589fee5f13777.jpg',
-      icon: 'shield',
+      description:
+        'Coordinamento in progettazione ed esecuzione, valutazione dei rischi e formazione. La prevenzione entra nel metodo, non solo nei verbali.',
+      items: ['Coordinamento in cantiere', 'Valutazione dei rischi', 'Formazione del personale'],
     },
     {
       title: 'Manutenzioni',
-      description: 'Piani di manutenzione ordinaria e straordinaria per impianti, strutture e presidi tecnici.',
-      image: 'assets/923d80660c54cbb0e81a1e45f08d246a.jpg',
-      icon: 'tool',
+      description:
+        'Programmi ordinari e interventi straordinari su strutture e impianti, con registro degli interventi consultabile dal committente.',
+      items: ['Programmi periodici', 'Impianti elettrici e termici', 'Pronto intervento'],
     },
     {
       title: 'General Contractor',
-      description: 'Una regia unica per seguire il progetto dall’impostazione iniziale al coordinamento delle lavorazioni.',
-      image: 'assets/9facb1eb5cb805e8f7a9d9ea226dcf46.jpg',
-      icon: 'grid',
+      description:
+        'Un solo contratto e un solo referente dal capitolato alla consegna, con le lavorazioni coordinate sotto la nostra responsabilità.',
+      items: ['Contratto chiavi in mano', 'Direzione operativa', 'Collaudi e consegna'],
     },
     {
-      title: 'Ambiente',
-      description: 'Interventi e consulenze orientati a riqualificazione, sostenibilita e impatto ambientale.',
-      image: 'assets/d8c37876a23ff033b4dc9f93b862106c.jpg',
-      icon: 'leaf',
+      title: 'Restauro e Conservazione',
+      description:
+        'Interventi su edifici vincolati e beni di interesse storico: diagnosi, conservazione delle superfici e istruttoria con la Soprintendenza.',
+      items: ['Edifici tutelati', 'Conservazione delle superfici', 'Istruttoria di tutela'],
     },
     {
       title: 'Prevenzione Incendi',
-      description: 'Adeguamenti, pratiche e gestione dei presidi per mantenere la conformita antincendio nel tempo.',
-      image: 'assets/d3270432308e0751226a7bd51e7064e3.jpg',
-      icon: 'flame',
+      description:
+        'Adeguamenti, pratiche antincendio e gestione dei presidi, mantenuti in conformità anche dopo il collaudo.',
+      items: ['Pratiche SCIA e CPI', 'Presidi e vie di esodo', 'Verifiche periodiche'],
     },
   ],
 };
-
