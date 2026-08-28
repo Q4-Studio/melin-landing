@@ -3,26 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#14100C" />
+    <meta name="theme-color" content="#008AC3" />
     <meta name="robots" content="noindex, follow" />
     <title>Privacy policy | Melin Group</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Archivo:wght@400;500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
 
       :root {
-        color-scheme: dark;
-        --inchiostro: #14100c;
-        --noce: #241c14;
-        --carta: #ebe6d9;
-        --bordeaux: #6e2330;
-        --ottone: #a8874a;
-        --testo: #ece6d8;
-        --tenue: #b3a693;
-        --filetto: rgba(168, 135, 74, 0.34);
-        --display: "EB Garamond", Georgia, serif;
-        --corpo: "Archivo", Arial, sans-serif;
+        color-scheme: light;
+        --blu: #008ac3;
+        --blu-azione: #006a97;
+        --blu-notte: #0b3a52;
+        --bianco: #ffffff;
+        --velo: #edf5fa;
+        --inchiostro: #33454f;
+        --inchiostro-tenue: #5f7480;
+        --bordo: #dfe6ec;
+        --testo: "IBM Plex Sans", "Segoe UI", Helvetica, Arial, sans-serif;
       }
 
       * {
@@ -31,20 +30,22 @@
 
       body {
         margin: 0;
-        font-family: var(--corpo);
+        font-family: var(--testo);
         line-height: 1.65;
-        color: var(--testo);
-        background: var(--inchiostro);
+        color: var(--inchiostro);
+        background: var(--bianco);
+        -webkit-font-smoothing: antialiased;
       }
 
       .testata {
-        border-bottom: 1px solid var(--filetto);
+        background: rgba(255, 255, 255, 0.94);
+        border-bottom: 1px solid var(--bordo);
       }
 
       .testata__inner,
       main,
       .piede__inner {
-        width: min(880px, calc(100% - 2.5rem));
+        width: min(860px, calc(100% - 2.5rem));
         margin: 0 auto;
       }
 
@@ -53,112 +54,99 @@
         align-items: center;
         justify-content: space-between;
         gap: 1.5rem;
-        min-height: 4.75rem;
+        min-height: 4.5rem;
       }
 
       .testata img {
         display: block;
-        height: 2.1rem;
+        height: 2.2rem;
         width: auto;
-        filter: brightness(0) invert(1) sepia(0.22) brightness(0.97);
       }
 
-      .testata a.ritorno {
-        font-size: 0.82rem;
-        font-weight: 600;
-        color: var(--tenue);
+      a.ritorno {
+        font-size: 0.92rem;
+        font-weight: 500;
+        color: var(--blu-azione);
+        text-decoration: none;
       }
 
-      .testata a.ritorno:hover {
-        color: var(--ottone);
+      a.ritorno:hover {
+        text-decoration: underline;
       }
 
       main {
-        padding: clamp(3rem, 7vw, 5rem) 0 clamp(3.5rem, 8vw, 6rem);
+        padding: clamp(2.75rem, 6vw, 4rem) 0 clamp(3.5rem, 7vw, 5rem);
       }
 
       .etichetta {
-        font-size: 0.78rem;
+        display: block;
+        font-size: 0.8rem;
         font-weight: 600;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: var(--ottone);
-      }
-
-      hr.filetto {
-        border: 0;
-        height: 0;
-        border-top: 2px solid var(--ottone);
-        border-bottom: 1px solid var(--filetto);
-        padding-top: 3px;
-        margin: 1.1rem 0 1.6rem;
+        color: var(--blu-azione);
       }
 
       h1 {
-        font-family: var(--display);
-        font-weight: 500;
-        font-size: clamp(2.1rem, 5.5vw, 3.2rem);
-        line-height: 1.06;
-        margin: 0.9rem 0 0;
+        font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+        color: var(--blu-notte);
+        margin: 0.6rem 0 1.25rem;
       }
 
       h2 {
-        font-family: var(--display);
-        font-weight: 500;
-        font-size: 1.4rem;
-        line-height: 1.2;
-        margin: 2.6rem 0 0.6rem;
-        padding-top: 1.1rem;
-        border-top: 1px solid var(--filetto);
+        font-size: 1.2rem;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        color: var(--blu-notte);
+        margin: 2.4rem 0 0.55rem;
       }
 
       p {
         margin: 0 0 1rem;
-        color: var(--tenue);
+        color: var(--inchiostro-tenue);
       }
 
       .sommario {
-        font-family: var(--display);
-        font-size: 1.15rem;
-        font-style: italic;
-        color: #cbbfae;
-        max-width: 58ch;
+        font-size: 1.1rem;
+        color: var(--inchiostro);
+        max-width: 60ch;
       }
 
-      a {
-        color: var(--carta);
-        text-decoration: none;
-        border-bottom: 1px solid var(--filetto);
-      }
-
-      a:hover {
-        color: var(--ottone);
+      main a {
+        color: var(--blu-azione);
+        text-decoration: underline;
+        text-underline-offset: 2px;
       }
 
       :focus-visible {
-        outline: 2px solid var(--ottone);
-        outline-offset: 3px;
+        outline: 2px solid var(--blu-azione);
+        outline-offset: 2px;
       }
 
       .avvertenza {
-        margin-top: 2.75rem;
-        padding-left: 1.1rem;
-        border-left: 2px solid var(--bordeaux);
-        font-size: 0.9rem;
-        line-height: 1.75;
+        margin-top: 2.5rem;
+        padding: 1.1rem 1.25rem;
+        background: var(--velo);
+        border: 1px solid var(--bordo);
+        border-radius: 8px;
+        font-size: 0.95rem;
       }
 
       .avvertenza p {
         margin: 0;
+        color: var(--inchiostro);
       }
 
       .piede {
-        border-top: 1px solid var(--filetto);
-        padding: 2rem 0;
+        background: var(--blu-notte);
+        color: #cfdde6;
+        padding: 1.85rem 0;
       }
 
       .piede__inner p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         margin: 0;
       }
     </style>
@@ -166,17 +154,16 @@
   <body>
     <header class="testata">
       <div class="testata__inner">
-        <a href="./" aria-label="Melin Group, torna alla home" style="border: 0">
+        <a href="./" aria-label="Melin Group, torna alla home">
           <img src="./assets/melin-white.png" alt="Melin Group" />
         </a>
-        <a class="ritorno" href="./" style="border: 0">Torna al sito</a>
+        <a class="ritorno" href="./">Torna al sito</a>
       </div>
     </header>
 
     <main>
       <span class="etichetta">Documento informativo</span>
       <h1>Privacy policy</h1>
-      <hr class="filetto" />
       <p class="sommario">
         Questa informativa descrive il trattamento dei dati inviati tramite il modulo di richiesta
         del sito di Melin Group.

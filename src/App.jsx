@@ -38,6 +38,17 @@ const navItems = [
   { label: 'Contatti', href: '#contatti' },
 ];
 
+/** Tre quadrati arrotondati: la geometria del marchio, usata come segno. */
+function Quadrati() {
+  return (
+    <span className="quadrati" aria-hidden="true">
+      <span />
+      <span />
+      <span />
+    </span>
+  );
+}
+
 /** Rivela i blocchi una volta sola, quando entrano nel campo di lettura. */
 function useReveal(root) {
   useEffect(() => {
@@ -171,289 +182,269 @@ function App() {
               </a>
             ))}
           </nav>
-          <a className="testata__cta" href="#contatti">
+          <a className="bottone bottone--pieno testata__cta" href="#contatti">
             Richiedi un sopralluogo
           </a>
         </div>
       </header>
 
       <main id="contenuto">
-        {/* ------------------------------------------------ Frontespizio */}
-        <section className="frontespizio" id="top">
+        {/* ---------------------------------------------------- Apertura */}
+        <section className="hero" id="top">
+          <div className="container hero__grid">
+            <div className="hero__testo">
+              <div className="hero__impronta">
+                <Quadrati />
+                <span>{siteContent.heroClassification}</span>
+              </div>
+              <h1>{siteContent.heroTitle}</h1>
+              <p className="hero__lead">{siteContent.heroBody}</p>
+              <div className="hero__azioni">
+                <a className="bottone bottone--pieno" href={siteContent.heroPrimaryCta.href}>
+                  {siteContent.heroPrimaryCta.label}
+                </a>
+                <a className="bottone bottone--contorno" href={siteContent.heroSecondaryCta.href}>
+                  {siteContent.heroSecondaryCta.label}
+                </a>
+              </div>
+            </div>
+
+            <div className="hero__media">
+              <img
+                src={`${baseUrl}${siteContent.heroImage.src}`}
+                alt={siteContent.heroImage.alt}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* ---------------------------------------------------- Servizi */}
+        <section className="sezione sezione--grigia" id="servizi">
           <div className="container">
-            <div className="frontespizio__grid">
-              <div className="frontespizio__testo">
-                <div className="frontespizio__impronta">
-                  <span>{siteContent.heroImprint}</span>
-                  <span className="dicitura">{siteContent.heroClassification}</span>
-                </div>
-                <hr className="filetto" />
-                <h1>{siteContent.heroTitle}</h1>
-                <p className="frontespizio__sommario">{siteContent.heroBody}</p>
-                <div className="frontespizio__azioni">
-                  <a className="bottone bottone--pieno" href={siteContent.heroPrimaryCta.href}>
-                    {siteContent.heroPrimaryCta.label}
-                  </a>
-                  <a className="bottone bottone--filetto" href={siteContent.heroSecondaryCta.href}>
-                    {siteContent.heroSecondaryCta.label}
-                  </a>
-                </div>
-              </div>
+            <div className="intestazione rivela">
+              <span className="etichetta">{siteContent.servicesEyebrow}</span>
+              <h2>{siteContent.servicesHeading}</h2>
+              <p>{siteContent.servicesIntro}</p>
+            </div>
 
-              <div className="apertura__immagine">
-                <img
-                  src={`${baseUrl}${siteContent.heroImage.src}`}
-                  alt={siteContent.heroImage.alt}
+            <div className="griglia-servizi">
+              {siteContent.services.map((service, index) => (
+                <ServiceCard
+                  key={service.title}
+                  service={service}
+                  itemsLabel={siteContent.servicesItemsLabel}
+                  index={index}
                 />
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* ------------------------------------------------ II · Catalogo */}
-        <section className="sezione sezione--chiara" id="servizi">
-          <div className="container impaginato">
-            <div className="margine">
-              <span className="margine__voce">{siteContent.servicesEyebrow}</span>
-            </div>
-
-            <div>
-              <div className="intestazione rivela">
-                <h2>{siteContent.servicesHeading}</h2>
-                <p>{siteContent.servicesIntro}</p>
-              </div>
-
-              <div className="catalogo">
-                {siteContent.services.map((service, index) => (
-                  <ServiceCard
-                    key={service.title}
-                    service={service}
-                    itemsLabel={siteContent.servicesItemsLabel}
-                    index={index}
-                  />
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ------------------------------------------------ III · Chi siamo */}
-        <section className="sezione sezione--scura" id="chi-siamo">
-          <div className="container impaginato">
-            <div className="margine">
-              <span className="margine__voce">{siteContent.aboutEyebrow}</span>
+        {/* ---------------------------------------------------- Chi siamo */}
+        <section className="sezione" id="chi-siamo">
+          <div className="container">
+            <div className="intestazione rivela">
+              <span className="etichetta">{siteContent.aboutEyebrow}</span>
+              <h2>{siteContent.aboutTitle}</h2>
             </div>
 
-            <div>
-              <div className="intestazione rivela">
-                <h2>{siteContent.aboutTitle}</h2>
+            <div className="chi-siamo__grid">
+              <div className="chi-siamo__testo rivela">
+                <p>{siteContent.aboutBody}</p>
+                <p>{siteContent.aboutBodySecondary}</p>
               </div>
 
-              <div className="presentazione">
-                <div className="presentazione__testo rivela">
-                  <p>{siteContent.aboutBody}</p>
-                  <p>{siteContent.aboutBodySecondary}</p>
-                </div>
-
-                <div className="presentazione__lato rivela">
-                  <span className="occhiello">{siteContent.aboutHighlightsLabel}</span>
-                  <ul className="competenze">
-                    {siteContent.aboutHighlights.map((item) => (
-                      <li key={item}>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="chi-siamo__lato rivela">
+                <span className="etichetta">{siteContent.aboutHighlightsLabel}</span>
+                <ul className="competenze">
+                  {siteContent.aboutHighlights.map((item) => (
+                    <li key={item}>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            </div>
 
-              <div className="galleria rivela">
-                {siteContent.gallery.map((shot) => (
-                  <div className="galleria__immagine" key={shot.src}>
-                    <img src={`${baseUrl}${shot.src}`} alt={shot.alt} loading="lazy" />
-                  </div>
-                ))}
-              </div>
+            <div className="galleria rivela">
+              {siteContent.gallery.map((shot) => (
+                <img key={shot.src} src={`${baseUrl}${shot.src}`} alt={shot.alt} loading="lazy" />
+              ))}
             </div>
           </div>
         </section>
 
-        {/* ------------------------------------------------ IV · Contatti */}
-        <section className="sezione sezione--chiara" id="contatti">
-          <div className="container impaginato">
-            <div className="margine">
-              <span className="margine__voce">{siteContent.contactEyebrow}</span>
+        {/* ---------------------------------------------------- Contatti */}
+        <section className="sezione sezione--velo" id="contatti">
+          <div className="container">
+            <div className="intestazione rivela">
+              <span className="etichetta">{siteContent.contactEyebrow}</span>
+              <h2>{siteContent.contactTitle}</h2>
             </div>
 
-            <div>
-              <div className="contatti">
-                <div className="contatti__copy rivela">
-                  <h2>{siteContent.contactTitle}</h2>
-                  <p>{siteContent.contactIntro}</p>
+            <div className="contatti">
+              <div className="contatti__copy rivela">
+                <p>{siteContent.contactIntro}</p>
 
-                  <ul className="recapiti">
-                    <li>
-                      <a href={siteContent.contact.mapsUrl} target="_blank" rel="noreferrer">
-                        <strong>Sede</strong>
-                        <span>{siteContent.contact.address}</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href={`mailto:${siteContent.contact.email}`}>
-                        <strong>Email</strong>
-                        <span>{siteContent.contact.email}</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href={`tel:${siteContent.contact.phoneHref}`}>
-                        <strong>Telefono</strong>
-                        <span>{siteContent.contact.phoneDisplay}</span>
-                      </a>
-                    </li>
-                    <li>
-                      <div>
-                        <strong>C.F. e P.I.</strong>
-                        <span>{siteContent.contact.vat}</span>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <div className="contatti__azioni">
-                    <a
-                      className="bottone bottone--filetto"
-                      href={siteContent.contact.mapsUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                        <circle cx="12" cy="10" r="3" />
-                      </svg>
-                      Apri la mappa
+                <ul className="recapiti">
+                  <li>
+                    <a href={siteContent.contact.mapsUrl} target="_blank" rel="noreferrer">
+                      <strong>Sede</strong>
+                      <span>{siteContent.contact.address}</span>
                     </a>
-                    <a
-                      className="bottone bottone--filetto"
-                      href={siteContent.contact.facebookUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                      </svg>
-                      Facebook
+                  </li>
+                  <li>
+                    <a href={`mailto:${siteContent.contact.email}`}>
+                      <strong>Email</strong>
+                      <span>{siteContent.contact.email}</span>
                     </a>
-                  </div>
-                </div>
-
-                <div className="modulo rivela">
-                  <div className="modulo__testata">
-                    <h3>{siteContent.formTitle}</h3>
-                  </div>
-
-                  <form onSubmit={handleSubmit}>
-                    <label className="campo">
-                      <span>Nome e cognome</span>
-                      <input
-                        autoComplete="name"
-                        name="name"
-                        value={form.name}
-                        onChange={handleChange}
-                        required
-                      />
-                    </label>
-                    <label className="campo">
-                      <span>Email</span>
-                      <input
-                        autoComplete="email"
-                        inputMode="email"
-                        name="email"
-                        type="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        required
-                      />
-                    </label>
-                    <label className="campo">
-                      <span>Telefono</span>
-                      <input
-                        autoComplete="tel"
-                        inputMode="tel"
-                        name="phone"
-                        value={form.phone}
-                        onChange={handleChange}
-                      />
-                    </label>
-                    <label className="campo">
-                      <span>Immobile e intervento</span>
-                      <textarea
-                        name="message"
-                        rows="5"
-                        placeholder="Tipo di edificio, comune, natura dell’intervento."
-                        value={form.message}
-                        onChange={handleChange}
-                        required
-                      />
-                    </label>
-
-                    <div className="esca" aria-hidden="true">
-                      <label htmlFor="azienda">Azienda</label>
-                      <input
-                        id="azienda"
-                        name="azienda"
-                        type="text"
-                        tabIndex={-1}
-                        autoComplete="off"
-                        value={form.azienda}
-                        onChange={handleChange}
-                      />
+                  </li>
+                  <li>
+                    <a href={`tel:${siteContent.contact.phoneHref}`}>
+                      <strong>Telefono</strong>
+                      <span>{siteContent.contact.phoneDisplay}</span>
+                    </a>
+                  </li>
+                  <li>
+                    <div>
+                      <strong>C.F. e P.I.</strong>
+                      <span>{siteContent.contact.vat}</span>
                     </div>
+                  </li>
+                </ul>
 
-                    <label className="consenso">
-                      <input
-                        name="consent"
-                        type="checkbox"
-                        checked={form.consent}
-                        onChange={handleChange}
-                      />
-                      <span>
-                        Ho letto la <a href={privacyHref}>privacy policy</a> e acconsento al
-                        trattamento dei dati per essere ricontattato.
-                      </span>
-                    </label>
-
-                    <button
-                      className="bottone bottone--pieno bottone--blocco"
-                      type="submit"
-                      disabled={isSubmitting}
+                <div className="contatti__azioni">
+                  <a
+                    className="bottone bottone--contorno"
+                    href={siteContent.contact.mapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.7"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
                     >
-                      {isSubmitting ? 'Invio in corso…' : 'Invia la richiesta'}
-                    </button>
-
-                    <p className={`esito esito--${status.type}`} role="status" aria-live="polite">
-                      {status.message}
-                    </p>
-                  </form>
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    Apri la mappa
+                  </a>
+                  <a
+                    className="bottone bottone--contorno"
+                    href={siteContent.contact.facebookUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                    Facebook
+                  </a>
                 </div>
               </div>
 
-              <div className="mappa rivela">
-                <div className="mappa__cornice">
-                  <iframe
-                    title="Mappa della sede Melin Group"
-                    loading="lazy"
-                    src="https://www.google.com/maps?q=45.435452,11.959087&z=17&output=embed"
-                  />
+              <div className="form-card rivela">
+                <div className="form-card__testata">
+                  <h3>{siteContent.formTitle}</h3>
                 </div>
+
+                <form onSubmit={handleSubmit}>
+                  <label className="campo">
+                    <span>Nome e cognome</span>
+                    <input
+                      autoComplete="name"
+                      name="name"
+                      value={form.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+                  <label className="campo">
+                    <span>Email</span>
+                    <input
+                      autoComplete="email"
+                      inputMode="email"
+                      name="email"
+                      type="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+                  <label className="campo">
+                    <span>Telefono</span>
+                    <input
+                      autoComplete="tel"
+                      inputMode="tel"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                    />
+                  </label>
+                  <label className="campo">
+                    <span>Immobile e intervento</span>
+                    <textarea
+                      name="message"
+                      rows="5"
+                      placeholder="Tipo di edificio, comune, natura dell’intervento."
+                      value={form.message}
+                      onChange={handleChange}
+                      required
+                    />
+                  </label>
+
+                  <div className="esca" aria-hidden="true">
+                    <label htmlFor="azienda">Azienda</label>
+                    <input
+                      id="azienda"
+                      name="azienda"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={form.azienda}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <label className="consenso">
+                    <input
+                      name="consent"
+                      type="checkbox"
+                      checked={form.consent}
+                      onChange={handleChange}
+                    />
+                    <span>
+                      Ho letto la <a href={privacyHref}>privacy policy</a> e acconsento al
+                      trattamento dei dati per essere ricontattato.
+                    </span>
+                  </label>
+
+                  <button
+                    className="bottone bottone--pieno bottone--blocco"
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Invio in corso…' : 'Invia la richiesta'}
+                  </button>
+
+                  <p className={`esito esito--${status.type}`} role="status" aria-live="polite">
+                    {status.message}
+                  </p>
+                </form>
               </div>
+            </div>
+
+            <div className="mappa rivela">
+              <iframe
+                title="Mappa della sede Melin Group"
+                loading="lazy"
+                src="https://www.google.com/maps?q=45.435452,11.959087&z=17&output=embed"
+              />
             </div>
           </div>
         </section>
