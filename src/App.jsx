@@ -248,22 +248,10 @@ function App() {
               <h2>{siteContent.aboutTitle}</h2>
             </div>
 
-            <div className="chi-siamo__grid">
-              <div className="chi-siamo__testo rivela">
-                <p>{siteContent.aboutBody}</p>
-                <p>{siteContent.aboutBodySecondary}</p>
-              </div>
-
-              <div className="chi-siamo__lato rivela">
-                <span className="etichetta">{siteContent.aboutHighlightsLabel}</span>
-                <ul className="competenze">
-                  {siteContent.aboutHighlights.map((item) => (
-                    <li key={item}>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="chi-siamo__testo rivela">
+              <p>{siteContent.aboutBody}</p>
+              <p>{siteContent.aboutBodySecondary}</p>
+              <p>{siteContent.aboutBodyPublic}</p>
             </div>
 
             <div className="galleria rivela">
