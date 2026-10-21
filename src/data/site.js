@@ -38,8 +38,8 @@ export const siteContent = {
     'Lavoriamo anche con enti e strutture aperte al pubblico, dove scadenze e conformità non ammettono ritardi: tra queste il Convitto Foscarini e l’Oratorio San Rocco.',
   gallery: [
     {
-      src: 'assets/143aab412b1afd0a4e1589fee5f13777.jpg',
-      alt: 'Squadra tecnica che consulta la documentazione di cantiere',
+      src: 'assets/12ab541f441c1f30078978e014f01ef3.jpg',
+      alt: 'Due tecnici in cantiere che consultano la documentazione',
     },
     {
       src: 'assets/923d80660c54cbb0e81a1e45f08d246a.jpg',
