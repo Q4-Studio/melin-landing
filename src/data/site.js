@@ -31,11 +31,11 @@ export const siteContent = {
   aboutEyebrow: 'Chi siamo',
   aboutTitle: 'Un solo interlocutore, per tutta la durata dell’opera.',
   aboutBody:
-    'Melin Group S.r.l. lavora a stretto contatto con il committente, pubblico o privato, e propone soluzioni chiavi in mano. Il nostro ambito principale è la prevenzione incendi: dalle pratiche all’adeguamento delle strutture, fino alla gestione dei presidi nel tempo.',
+    'Melin Group S.r.l. segue committenti pubblici e privati con interventi chiavi in mano. Il nostro ambito principale è la prevenzione incendi: dalle pratiche all’adeguamento delle strutture, fino alla gestione dei presidi nel tempo.',
   aboutBodySecondary:
     'Per alcuni clienti seguiamo gli impianti in modo continuativo: monitoraggio, verifiche periodiche e manutenzione, con particolare attenzione agli impianti antincendio e un registro degli interventi sempre aggiornato.',
   aboutBodyPublic:
-    'Lavoriamo anche con enti e strutture aperte al pubblico, dove scadenze e conformità non ammettono ritardi: tra queste il Convitto Foscarini e l’Oratorio San Rocco.',
+    'Lavoriamo anche con enti e strutture aperte al pubblico, tra cui il Convitto Foscarini e l’Oratorio San Rocco.',
   gallery: [
     {
       src: 'assets/12ab541f441c1f30078978e014f01ef3.jpg',
@@ -53,9 +53,9 @@ export const siteContent = {
 
   // Contatti
   contactEyebrow: 'Contatti',
-  contactTitle: 'Descrivete l’immobile e l’intervento.',
+  contactTitle: 'Sopralluoghi e valutazioni tecniche',
   contactIntro:
-    'Rispondiamo con un sopralluogo o con una prima valutazione tecnica. Per le richieste urgenti conviene il telefono.',
+    'Ogni richiesta riceve un sopralluogo o una prima valutazione tecnica. Per le urgenze è preferibile il contatto telefonico.',
   formTitle: 'Richiedi un sopralluogo',
   contact: {
     address: 'Viale del Lavoro 2/F, 35010 Vigonza (PD)',
@@ -73,13 +73,13 @@ export const siteContent = {
     {
       title: 'Prevenzione Incendi',
       description:
-        'Pratiche, adeguamenti e presidi antincendio per strutture pubbliche e private, dagli edifici scolastici ai capannoni. La conformità resta tale anche dopo il collaudo.',
+        'Pratiche, adeguamenti e presidi antincendio per strutture pubbliche e private, dagli edifici scolastici ai capannoni, con la conformità mantenuta anche dopo il collaudo.',
       items: ['Pratiche SCIA e CPI', 'Impianti, presidi e vie di esodo', 'Verifiche e monitoraggio periodico'],
     },
     {
       title: 'Sicurezza',
       description:
-        'Coordinamento in progettazione ed esecuzione, valutazione dei rischi e formazione. La prevenzione entra nel metodo, non solo nei verbali.',
+        'Coordinamento della sicurezza in progettazione ed esecuzione, valutazione dei rischi e formazione del personale.',
       items: ['Coordinamento in cantiere', 'Valutazione dei rischi', 'Formazione del personale'],
     },
     {
