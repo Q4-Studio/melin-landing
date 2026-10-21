@@ -3,10 +3,10 @@ export const siteContent = {
 
   // Apertura
   heroImprint: 'Melin Group S.r.l., Vigonza (PD)',
-  heroClassification: 'Edilizia · Sicurezza · Conformità · Conservazione',
-  heroTitle: 'Prendiamo in carico edifici che devono durare.',
+  heroClassification: 'Antincendio · Sicurezza · Manutenzioni',
+  heroTitle: 'Prevenzione incendi e manutenzione per strutture pubbliche e private.',
   heroBody:
-    'Affianchiamo committenti pubblici e privati nella gestione tecnica del patrimonio edilizio: una sola regia per progetto, conformità, cantiere e manutenzione nel tempo.',
+    'Pratiche antincendio, adeguamenti, presidi e monitoraggio degli impianti per scuole, convitti, oratori, uffici e capannoni. Un solo referente tecnico, dal sopralluogo alla manutenzione nel tempo.',
   heroPrimaryCta: {
     label: 'Richiedi un sopralluogo',
     href: '#contatti',
@@ -22,30 +22,24 @@ export const siteContent = {
 
   // Aree di intervento
   servicesEyebrow: 'Aree di intervento',
-  servicesHeading: 'Sei aree di intervento, coordinate tra loro.',
+  servicesHeading: 'Quattro aree di intervento, coordinate tra loro.',
   servicesIntro:
-    'Ogni area ha il suo referente tecnico e la sua documentazione. Pratiche, verifiche, lavorazioni e manutenzioni restano tracciabili dal primo sopralluogo alla consegna.',
+    'Ogni area ha il suo referente tecnico e la sua documentazione. Pratiche, verifiche, lavorazioni e manutenzioni restano tracciabili dal primo sopralluogo ai controlli periodici.',
   servicesItemsLabel: 'Comprende',
 
   // Chi siamo
   aboutEyebrow: 'Chi siamo',
   aboutTitle: 'Un solo interlocutore, per tutta la durata dell’opera.',
   aboutBody:
-    'Melin Group S.r.l. lavora a stretto contatto con il committente e propone soluzioni contract chiavi in mano. Mettiamo in una sola squadra competenze che di norma stanno in quattro fornitori diversi: tecnica edilizia, impianti, sicurezza e pratiche amministrative.',
+    'Melin Group S.r.l. lavora a stretto contatto con il committente, pubblico o privato, e propone soluzioni chiavi in mano. Il nostro ambito principale è la prevenzione incendi: dalle pratiche all’adeguamento delle strutture, fino alla gestione dei presidi nel tempo.',
   aboutBodySecondary:
-    'Il risultato è un cantiere leggibile: un capitolato, un cronoprogramma, un registro degli interventi e una sola firma di responsabilità. Lo stesso metodo che serve quando si lavora su un edificio tutelato, dove nulla può essere improvvisato.',
-  aboutHighlightsLabel: 'Competenze in casa',
-  aboutHighlights: [
-    'Impianti elettrici e termici',
-    'Prevenzione incendi e sicurezza sul lavoro',
-    'Riqualificazione energetica degli edifici',
-    'Requisiti acustici passivi e valutazione di impatto acustico',
-    'Interventi su edifici tutelati e beni vincolati',
-  ],
+    'Per alcuni clienti seguiamo gli impianti in modo continuativo: monitoraggio, verifiche periodiche e manutenzione, con particolare attenzione agli impianti antincendio e un registro degli interventi sempre aggiornato.',
+  aboutBodyPublic:
+    'Lavoriamo anche con enti e strutture aperte al pubblico, dove scadenze e conformità non ammettono ritardi: tra queste il Convitto Foscarini e l’Oratorio San Rocco.',
   gallery: [
     {
-      src: 'assets/143aab412b1afd0a4e1589fee5f13777.jpg',
-      alt: 'Squadra tecnica che consulta la documentazione di cantiere',
+      src: 'assets/12ab541f441c1f30078978e014f01ef3.jpg',
+      alt: 'Due tecnici in cantiere che consultano la documentazione',
     },
     {
       src: 'assets/923d80660c54cbb0e81a1e45f08d246a.jpg',
@@ -77,10 +71,10 @@ export const siteContent = {
 
   services: [
     {
-      title: 'Amministrazione',
+      title: 'Prevenzione Incendi',
       description:
-        'Teniamo l’ordine delle carte: pratiche, autorizzazioni, scadenze e rapporti con gli enti, allineati all’avanzamento dei lavori.',
-      items: ['Pratiche edilizie', 'Gestione documentale', 'Rapporti con gli enti'],
+        'Pratiche, adeguamenti e presidi antincendio per strutture pubbliche e private, dagli edifici scolastici ai capannoni. La conformità resta tale anche dopo il collaudo.',
+      items: ['Pratiche SCIA e CPI', 'Impianti, presidi e vie di esodo', 'Verifiche e monitoraggio periodico'],
     },
     {
       title: 'Sicurezza',
@@ -92,25 +86,13 @@ export const siteContent = {
       title: 'Manutenzioni',
       description:
         'Programmi ordinari e interventi straordinari su strutture e impianti, con registro degli interventi consultabile dal committente.',
-      items: ['Programmi periodici', 'Impianti elettrici e termici', 'Pronto intervento'],
+      items: ['Programmi periodici', 'Monitoraggio degli impianti', 'Pronto intervento'],
     },
     {
       title: 'General Contractor',
       description:
         'Un solo contratto e un solo referente dal capitolato alla consegna, con le lavorazioni coordinate sotto la nostra responsabilità.',
       items: ['Contratto chiavi in mano', 'Direzione operativa', 'Collaudi e consegna'],
-    },
-    {
-      title: 'Restauro e Conservazione',
-      description:
-        'Interventi su edifici vincolati e beni di interesse storico: diagnosi, conservazione delle superfici e istruttoria con la Soprintendenza.',
-      items: ['Edifici tutelati', 'Conservazione delle superfici', 'Istruttoria di tutela'],
-    },
-    {
-      title: 'Prevenzione Incendi',
-      description:
-        'Adeguamenti, pratiche antincendio e gestione dei presidi, mantenuti in conformità anche dopo il collaudo.',
-      items: ['Pratiche SCIA e CPI', 'Presidi e vie di esodo', 'Verifiche periodiche'],
     },
   ],
 };

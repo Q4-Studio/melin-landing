@@ -233,11 +233,11 @@ p {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  min-height: 4.5rem;
+  min-height: 5.25rem;
 }
 
 .marchio img {
-  height: 2.35rem;
+  height: 3.25rem;
   width: auto;
 }
 
@@ -422,7 +422,7 @@ p {
 .griglia-servizi {
   margin-top: clamp(2.25rem, 4vw, 3rem);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
@@ -498,11 +498,8 @@ p {
    Chi siamo
    -------------------------------------------------------------------------- */
 
-.chi-siamo__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-  gap: clamp(2rem, 4.5vw, 3.5rem);
-  align-items: start;
+.chi-siamo__testo {
+  max-width: 48rem;
   margin-top: clamp(1.75rem, 3vw, 2.5rem);
 }
 
@@ -513,42 +510,6 @@ p {
 .chi-siamo__testo p {
   font-size: 1.05rem;
   color: var(--inchiostro-tenue);
-}
-
-.chi-siamo__lato {
-  padding: 1.65rem 1.5rem;
-  background: var(--nebbia);
-  border: 1px solid var(--bordo);
-  border-radius: var(--raggio);
-}
-
-.competenze {
-  list-style: none;
-  margin: 0.9rem 0 0;
-  padding: 0;
-}
-
-.competenze li {
-  display: flex;
-  gap: 0.7rem;
-  padding: 0.7rem 0;
-  border-bottom: 1px solid var(--bordo);
-  font-size: 0.98rem;
-}
-
-.competenze li:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.competenze li::before {
-  content: "";
-  flex-shrink: 0;
-  width: 0.4rem;
-  height: 0.4rem;
-  margin-top: 0.55em;
-  border-radius: 2px;
-  background: var(--blu);
 }
 
 .galleria {
@@ -916,7 +877,6 @@ p {
 
 @media (max-width: 1000px) {
   .hero__grid,
-  .chi-siamo__grid,
   .contatti {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -946,7 +906,7 @@ p {
   }
 
   .marchio img {
-    height: 1.95rem;
+    height: 2.6rem;
   }
 
   .navigazione {
