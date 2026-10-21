@@ -3,7 +3,7 @@ export const siteContent = {
 
   // Apertura
   heroImprint: 'Melin Group S.r.l., Vigonza (PD)',
-  heroClassification: 'Antincendio · Sicurezza · Manutenzioni · Edilizia',
+  heroClassification: 'Antincendio · Sicurezza · Manutenzioni',
   heroTitle: 'Prevenzione incendi e manutenzione per strutture pubbliche e private.',
   heroBody:
     'Pratiche antincendio, adeguamenti, presidi e monitoraggio degli impianti per scuole, convitti, oratori, uffici e capannoni. Un solo referente tecnico, dal sopralluogo alla manutenzione nel tempo.',
