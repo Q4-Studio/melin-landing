@@ -109,7 +109,7 @@ function App() {
       setForm(initialForm);
       setStatus({
         type: 'success',
-        message: 'Richiesta inviata. Vi rispondiamo entro un giorno lavorativo.',
+        message: 'Richiesta inviata. Risposta entro un giorno lavorativo.',
       });
       return;
     }
@@ -117,7 +117,7 @@ function App() {
     if (!form.consent) {
       setStatus({
         type: 'error',
-        message: 'Manca il consenso al trattamento dei dati. Spuntate la casella per inviare.',
+        message: 'Per inviare la richiesta è necessario il consenso al trattamento dei dati.',
       });
       return;
     }
@@ -126,8 +126,8 @@ function App() {
       setStatus({
         type: 'error',
         message:
-          'Il modulo non è ancora collegato. Nel frattempo scrivete a ' +
-          `${siteContent.contact.email} o chiamate lo ${siteContent.contact.phoneDisplay}.`,
+          'Il modulo non è al momento attivo. Contatti diretti: ' +
+          `${siteContent.contact.email}, ${siteContent.contact.phoneDisplay}.`,
       });
       return;
     }
@@ -150,13 +150,13 @@ function App() {
       setForm(initialForm);
       setStatus({
         type: 'success',
-        message: 'Richiesta inviata. Vi rispondiamo entro un giorno lavorativo.',
+        message: 'Richiesta inviata. Risposta entro un giorno lavorativo.',
       });
     } catch (error) {
       setStatus({
         type: 'error',
         message:
-          'Invio non riuscito: la richiesta non è partita. Riprovate, oppure scrivete a ' +
+          'Invio non riuscito. Riprovare o scrivere a ' +
           `${siteContent.contact.email}.`,
       });
     } finally {
